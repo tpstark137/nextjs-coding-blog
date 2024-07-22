@@ -1,7 +1,15 @@
+import LatestPosts from "@/components/home/latest-posts";
+import { NavBar } from "@/components/navbar";
+
 export default function Home() {
   return (
     <>
-      <h1>Hello</h1>
+      <NavBar />
+      <main>
+        <div>
+          <LatestPosts />
+        </div>
+      </main>
     </>
   );
 }

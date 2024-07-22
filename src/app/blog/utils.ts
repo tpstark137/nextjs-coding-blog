@@ -38,7 +38,7 @@ export function getBlogPosts() {
 
 // we need to format date
 
-export function formatDate(date:string, includeRelative = false) {
+export function formatDate(date:string, includeRelative = true) {
     let currentDate = new Date();
     if(!date.includes("T")) {
         date = `${date}T00:00:00`;
@@ -54,11 +54,11 @@ export function formatDate(date:string, includeRelative = false) {
 
     let formattedDate = "";
 
-    if (yearsAgo > 0) {
+    if (yearsAgo > 0) { 
         formattedDate = `${yearsAgo}y ago`;
     }
     else if (monthsAgo > 0) {
-        formattedDate = `${monthsAgo}m ago`;
+        formattedDate = `${monthsAgo}mo ago`;
     }
     else if (daysAgo > 0) {
         formattedDate = `${daysAgo}d ago`;
