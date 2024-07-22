@@ -15,6 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Icons } from "./icons";
+import { ModeToggle } from "./ui/mode-toggle";
 
 const posts: { title: string; href: string; description: string }[] = [
   {
@@ -42,11 +43,12 @@ const posts: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function NavBar() {
+export function NavBar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between pt-10"
+        "flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between pt-10",
+        className
       )}
     >
       <Link href="/">
@@ -55,6 +57,7 @@ export function NavBar() {
           <p>CodingBlogs</p>
         </div>
       </Link>
+
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -80,13 +83,14 @@ export function NavBar() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <div className="flex items-center justify-between w-20">
-            <Link href="/rss">
-              <Icons.rss className="h-6 w-6" />
-            </Link>
-          </div>
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="flex items-center justify-between">
+        <ModeToggle />
+        <Link href="/rss">
+          <Icons.rss className="h-6 w-6" />
+        </Link>
+      </div>
     </div>
   );
 }
