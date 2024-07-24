@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Container from "@/components/Container";
 import { BreadcrumbWithCustomSeparator } from "@/components/Breadcrumb";
 import { CustomMDX } from "@/components/mdx";
+import ViewCounts from "@/components/ViewCounts";
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -37,6 +38,11 @@ export default function Page({
 
   return (
     <>
+      <ViewCounts
+        category={post.metadata.category}
+        title={post.metadata.title}
+        slug={post.slug}
+      />
       <Header>
         <Container>
           <BreadcrumbWithCustomSeparator
