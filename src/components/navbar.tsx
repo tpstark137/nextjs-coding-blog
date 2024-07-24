@@ -52,9 +52,9 @@ export function NavBar({ className }: { className?: string }) {
       )}
     >
       <Link href="/">
-        <div className="flex items-center justify-between w-32">
+        <div className="flex items-center justify-between w-40">
           <Icons.logo className="h-6 w-6" />
-          <p>CodingBlogs</p>
+          <p>CoderPaul-Blogs</p>
         </div>
       </Link>
 

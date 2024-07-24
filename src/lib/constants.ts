@@ -11,17 +11,17 @@ export const POSTS: { title: string; href: string; description: string }[] = [
       description: "Learn what are new in the javascript world",
     },
     {
-      title: "CSS",
+      title: "MySQL",
       href: "/blog/css",
       description: "Everything about CSS and the new features.",
     },
     {
-      title: "Performance",
+      title: "DBMS",
       href: "/blog/performance",
       description: "How to make your next app Blazing fast",
     },
     {
-      title: "Animaion",
+      title: "Data Structures",
       href: "/blog/animations",
       description:
         "Everything you need to know about animations. We are going to learn about animation library like framer motion, GSAP and many more.",

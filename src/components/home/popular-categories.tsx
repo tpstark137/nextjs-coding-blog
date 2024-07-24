@@ -12,7 +12,7 @@ export default function PopularCategories() {
           className="hover:scale-110 transition-all"
           asChild
         >
-          <Link href={post}>{post}</Link>
+          <Link href={"/"}>{post}</Link>
         </Button>
       ))}
     </div>
