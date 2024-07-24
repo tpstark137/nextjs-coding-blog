@@ -5,12 +5,18 @@ import { fetchUrl, fetcher } from "@/lib/utils";
 import { Icons } from "../icons";
 import Link from "next/link";
 import useSWR from "swr";
+import PopularPostSkeleton from "../skeleton/popularPostSkeleton";
 
 export default function PopularPosts() {
   const { data, error, isLoading } = useSWR(fetchUrl, fetcher);
 
   if (error) return <div>Failed to load</div>;
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <div>
+        <PopularPostSkeleton />
+      </div>
+    );
   return (
     <ul className="overflow-auto">
       {data?.map((post: { category: string; slug: string; title: string }) => (
