@@ -87,9 +87,6 @@ export function NavBar({ className }: { className?: string }) {
       </NavigationMenu>
       <div className="flex items-center justify-between">
         <ModeToggle />
-        <Link href="/rss">
-          <Icons.rss className="h-6 w-6" />
-        </Link>
       </div>
     </div>
   );

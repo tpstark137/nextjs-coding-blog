@@ -108,6 +108,9 @@ export default function Footer() {
             </form>
           </div>
         </div>
+        <div className="mt-8 border-t border-gray-200 pt-4 text-center text-xs text-gray-500 dark:border-gray-700 dark:text-gray-400">
+          &copy; 2024 CoderPaul-Blogs . All rights reserved.
+        </div>
       </div>
     </footer>
   );
