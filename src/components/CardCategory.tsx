@@ -17,7 +17,7 @@ export default function CardCategory({
   date: string;
 }) {
   return (
-    <Card className="w-[350px] h-[290px] shadow-lg">
+    <Card className="w-[350px] h-[290px] shadow-lg mb-5">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
